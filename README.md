@@ -4,7 +4,6 @@
 ### About Project
 
 Project Management helps your organization to manage and track all your projects more efficiently!
-arted).
 
 
 ### Next iteration to improve this app would be:
