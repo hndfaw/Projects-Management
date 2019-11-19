@@ -4,11 +4,22 @@ import { connect } from 'react-redux';
 
 
 class Projects extends Component {
+  state = {
+    filterTerm: ''
+  }
+
+  handleChangeFilter = e => {
+    this.setState({filterTerm: e.target.value})
+  }
+
   render() {
     const { projectsData } = this.props;
+    const { filterTerm } = this.state
     const sortedProjects = projectsData.sort((a,b) => {return a.beneficiaries - b.beneficiaries})
 
-    const projectCard = sortedProjects.map(project => {
+    const filterProjects = sortedProjects.filter(project => project.name.includes(filterTerm))
+
+    const projectCard = filterProjects.map(project => {
       return (
         <div key={project.id} className="project-card-container">
             <h4 className="project-name">{project.name}</h4>
@@ -20,8 +31,11 @@ class Projects extends Component {
 
     return (
       <div className="projects">
-        {projectCard}
         <button onClick={this.props.startGettingProjects}>Show Projects</button>
+        <input type="text" onChange={this.handleChangeFilter} />
+        <div className="projects-main-container">
+          {projectCard}
+        </div>
       </div>
     )
   }

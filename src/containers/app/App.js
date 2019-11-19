@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="app">
       <header>
-        Projects Finder!
+        Projects Management
       </header>
       <main>
         <Projects startGettingProjects={this.startGettingProjects}/>
