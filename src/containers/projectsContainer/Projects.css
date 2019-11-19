@@ -1,0 +1,28 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card-container {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 10px;
+  width: 200px;
+  height: 122px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.411);
+}
+
+.project-name {
+  padding: 10px
+}
+
+.project-beneficiaries,
+.project-budget {
+  background: lightgray;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+}

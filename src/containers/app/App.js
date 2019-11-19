@@ -2,25 +2,31 @@ import React, {Component} from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { setProjectsData } from '../../actions';
-import { fetchCatsFacts } from '../../apiCalls';
+import { fetchProjects } from '../../apiCalls';
+import Projects from '../projectsContainer/Projects';
 
 class App extends Component {
 
 
 
-  componentDidMount() {
-    fetchCatsFacts().then(data => {
-      this.props.handleCatsFacts(data)
+  startGettingProjects = () => {
+    fetchProjects().then(data => {
+      this.props.hanldeFetchProjects(data)
     })
   }
 
+
   render() {
+    
 
     return (
       <div className="app">
       <header>
         Projects Finder!
       </header>
+      <main>
+        <Projects startGettingProjects={this.startGettingProjects}/>
+      </main>
         
       </div>
     );
@@ -28,7 +34,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  handleCatsFacts: catsFactsData => dispatch(setProjectsData(catsFactsData))
+  hanldeFetchProjects: catsFactsData => dispatch(setProjectsData(catsFactsData))
 })
 
 export default connect(null, mapDispatchToProps)(App);
