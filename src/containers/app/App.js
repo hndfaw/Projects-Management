@@ -21,9 +21,8 @@ class App extends Component {
 
     return (
       <div className="app">
-      <header>
+      <header className="header">
         <h1>Projects Management</h1>
-        
       </header>
       <main>
         <Projects startGettingProjects={this.startGettingProjects}/>

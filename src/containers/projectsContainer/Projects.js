@@ -31,13 +31,13 @@ class Projects extends Component {
 
     return (
       <div className="projects">
-        <p>Project Management helps your organization to manage and track all your projects more efficiently!</p>
+        <p className="projects-description">Project Management helps your organization to manage and track all your projects more efficiently!</p>
         <div className="projects-instructions">
-          <h5>How to use:</h5>
-          <ul>
+          <h5 className="projects-instructions-title">How to use:</h5>
+          <ol className="projects-instructions-ol">
             <li>Click on the "Show Projects" button to show all your projects.</li>
             <li>Filter your projects by name, once you have clicked on the "Show Projects" now you can search for your project using the search bar.</li>
-          </ul>
+          </ol>
         </div>
 
         <button onClick={this.props.startGettingProjects} className="show-projects-btn">Show Projects</button>

@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.header {
+  height: 50px;
+  background: lightskyblue;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: rgb(33, 47, 87);
+}
