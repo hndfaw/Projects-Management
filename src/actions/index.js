@@ -1,4 +1,4 @@
-export const setCatsFactsData = data => ({
-  type: 'CATS_FACTS_DATA',
+export const setProjectsData = data => ({
+  type: 'SET_PROJECTS_DATA',
   data
 })

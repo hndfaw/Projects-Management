@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { catsFactsRedcuer } from './catsFactsReducer';
+import { projectsDataReducer } from './projectsDataReducer';
 
 export const rootReducer = combineReducers({
-  catsFactData: catsFactsRedcuer,
+  projectsData: projectsDataReducer,
 })

@@ -1,7 +1,6 @@
+
 export const fetchCatsFacts = () => {
-  return fetch('https://cat-fact.herokuapp.com/facts')
-    .then(res => res.json())
+  return  fetch('https://pmapi-node.herokuapp.com/api/v1/programs')
+        .then(res =>  res.json())
+        .then(data =>  data)
 }
-
-
-
