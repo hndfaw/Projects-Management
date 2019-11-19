@@ -31,7 +31,16 @@ class Projects extends Component {
 
     return (
       <div className="projects">
-        <button onClick={this.props.startGettingProjects}>Show Projects</button>
+        <p>Project Management helps your organization to manage and track all your projects more efficiently!</p>
+        <div className="projects-instructions">
+          <h5>How to use:</h5>
+          <ul>
+            <li>Click on the "Show Projects" button to show all your projects.</li>
+            <li>Filter your projects by name, once you have clicked on the "Show Projects" now you can search for your project using the search bar.</li>
+          </ul>
+        </div>
+
+        <button onClick={this.props.startGettingProjects} className="show-projects-btn">Show Projects</button>
         <input type="text" onChange={this.handleChangeFilter} className="search-input" placeholder="Find Projects..."/>
         <div className="projects-main-container">
           {projectCard}

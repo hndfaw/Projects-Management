@@ -39,3 +39,19 @@
   padding-left: 5px;
   font-size: 14px;
 }
+
+.show-projects-btn {
+  height: 25px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.projects-instructions {
+  border: 1px solid orange;
+  background: rgba(255, 166, 0, 0.37);
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 8px;
+  margin: 10 px;
+}
