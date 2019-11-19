@@ -17,7 +17,7 @@ class Projects extends Component {
     const { filterTerm } = this.state
     const sortedProjects = projectsData.sort((a,b) => {return a.beneficiaries - b.beneficiaries})
 
-    const filterProjects = sortedProjects.filter(project => project.name.includes(filterTerm))
+    const filterProjects = sortedProjects.filter(project => project.name.includes(filterTerm.toLowerCase()) || project.name.includes(filterTerm.toUpperCase()))
 
     const projectCard = filterProjects.map(project => {
       return (
@@ -32,7 +32,7 @@ class Projects extends Component {
     return (
       <div className="projects">
         <button onClick={this.props.startGettingProjects}>Show Projects</button>
-        <input type="text" onChange={this.handleChangeFilter} />
+        <input type="text" onChange={this.handleChangeFilter} className="search-input" placeholder="Find Projects..."/>
         <div className="projects-main-container">
           {projectCard}
         </div>
